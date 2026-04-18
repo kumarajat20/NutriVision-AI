@@ -46,7 +46,8 @@ style.css
 Model weights are not included due to GitHub size limitations.
 
 Download them from:
-(link will be added soon)
+* best_model_b3.pth : https://huggingface.co/kumarajat20/nutrivision-ai-models/resolve/main/best_model_b3.pth
+* best_model_final.pth : https://huggingface.co/kumarajat20/nutrivision-ai-models/resolve/main/best_model_final.pth
 
 Place in project root:
 
