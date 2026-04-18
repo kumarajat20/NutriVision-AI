@@ -6,6 +6,8 @@ from torchvision import transforms as T
 import json
 import torch.nn.functional as F
 import plotly.graph_objects as go 
+import os 
+import requests
 
 # --- IMPORT DATABASE ---
 from nutrition_data import get_nutritional_info
@@ -15,6 +17,18 @@ NUM_CLASSES = 80
 MODEL_A_PATH = 'best_model_b3.pth'
 MODEL_B_PATH = 'best_model_final.pth'
 CLASSES_PATH = 'classes.json'
+MODEL_A_URL = "https://huggingface.co/kumarajat20/nutrivision-ai-models/resolve/main/best_model_b3.pth"
+MODEL_B_URL = "https://huggingface.co/kumarajat20/nutrivision-ai-models/resolve/main/best_model_final.pth
+
+def download_model(url, path):
+    if not os.path.exists(path):
+        print(f"Downloading {path}...")
+        r = requests.get(url)
+        with open(path, 'wb') as f:
+            f.write(r.content)
+
+download_model(MODEL_A_URL, MODEL_A_PATH)
+download_model(MODEL_B_URL, MODEL_B_PATH)
 
 # --- PAGE CONFIG ---
 st.set_page_config(
