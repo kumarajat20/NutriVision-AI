@@ -1,0 +1,112 @@
+/* style.css */
+
+/* Import a nice font (Google Fonts) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+/* Apply font to everything */
+html, body, [class*="css"] {
+    font-family: 'Poppins', sans-serif;
+    color: #1E1E1E !important; 
+}
+
+/* 1. Main Background */
+.stApp {
+    background: linear-gradient(135deg, #FFF8E1 0%, #FFECB3 100%);
+}
+
+/* 2. Sidebar Styling */
+[data-testid="stSidebar"] {
+    background-color: #FFFFFF;
+    border-right: 1px solid #FFD54F;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+}
+
+/* Force Sidebar Text to be Dark */
+[data-testid="stSidebar"] p, [data-testid="stSidebar"] li, [data-testid="stSidebar"] h1 {
+    color: #1E1E1E !important;
+}
+
+/* 3. Headings */
+h1, h2, h3, h4, h5, h6 {
+    color: #BF360C !important; 
+    font-weight: 700 !important;
+}
+
+/* 4. Paragraphs and Lists */
+p, li, label, div {
+    color: #333333 !important;
+    font-weight: 500;
+}
+
+/* 5. Custom Cards */
+.result-card {
+    background-color: #FFFFFF;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    border: 1px solid #FFE0B2;
+    margin-bottom: 20px;
+    color: #1E1E1E !important;
+}
+
+/* Success/Warning Boxes */
+.success-box {
+    background-color: #E8F5E9;
+    border-left: 5px solid #2E7D32;
+    padding: 15px;
+    border-radius: 8px;
+    color: #1B5E20 !important;
+}
+
+.warning-box {
+    background-color: #FFEBEE;
+    border-left: 5px solid #C62828;
+    padding: 15px;
+    border-radius: 8px;
+    color: #B71C1C !important;
+}
+
+/* 6. Metric Styling */
+[data-testid="stMetricValue"] {
+    color: #E65100 !important;
+    font-size: 26px !important;
+    font-weight: bold !important;
+}
+
+[data-testid="stMetricLabel"] {
+    color: #555555 !important;
+}
+
+/* 7. File Uploader Area */
+[data-testid="stFileUploader"] {
+    background-color: #ffffff;
+    border: 2px dashed #FFB74D;
+    border-radius: 10px;
+    padding: 20px;
+}
+[data-testid="stFileUploader"] small {
+    color: #666666 !important;
+}
+
+/* 8. Buttons */
+.stButton>button {
+    background-color: #FF9800;
+    color: #FFFFFF !important;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+}
+.stButton>button:hover {
+    background-color: #F57C00;
+    color: #FFFFFF !important;
+}
+
+/* 9. Progress Bar */
+.stProgress > div > div > div > div {
+    background-color: #FF9800;
+}
+
+/* 10. Hide Streamlit Branding (Deploy button, Footer, Header) */
+#MainMenu {visibility: hidden;}
+header {visibility: hidden;}
+footer {visibility: hidden;}
